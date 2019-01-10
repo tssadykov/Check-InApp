@@ -17,6 +17,13 @@
 		3943076721C7E86A0075A3C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943076621C7E86A0075A3C9 /* CoreDataStack.swift */; };
 		3943076A21C7E9BF0075A3C9 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3943076821C7E9BF0075A3C9 /* UserModel.xcdatamodeld */; };
 		394C485A21E2327B002EDBE0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 394C485921E2327B002EDBE0 /* .gitignore */; };
+		394C485D21E2366C002EDBE0 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C485B21E2366C002EDBE0 /* FinishViewController.swift */; };
+		394C485E21E2366C002EDBE0 /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394C485C21E2366C002EDBE0 /* FinishViewController.xib */; };
+		394F5D6121E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */; };
+		394F5D6521E24700008AE0F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6321E24700008AE0F1 /* RegisterViewController.swift */; };
+		394F5D6621E24700008AE0F1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6421E24700008AE0F1 /* RegisterViewController.xib */; };
+		394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */; };
+		394F5D6D21E38232008AE0F1 /* NameDateEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */; };
 		39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D227A621BA7DE400409BEA /* AppDelegate.swift */; };
 		39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AA21BA7DE400409BEA /* Main.storyboard */; };
 		39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AD21BA7DE500409BEA /* Assets.xcassets */; };
@@ -45,6 +52,13 @@
 		3943076621C7E86A0075A3C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		3943076921C7E9BF0075A3C9 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		394C485921E2327B002EDBE0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../../../Projects/TinkoffChat/.gitignore; sourceTree = "<group>"; };
+		394C485B21E2366C002EDBE0 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		394C485C21E2366C002EDBE0 /* FinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
+		394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardPVC+PageVCDataSource.swift"; sourceTree = "<group>"; };
+		394F5D6321E24700008AE0F1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		394F5D6421E24700008AE0F1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameDateEditView.xib; sourceTree = "<group>"; };
+		394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDateEditView.swift; sourceTree = "<group>"; };
 		39D227A321BA7DE400409BEA /* CheckInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D227A621BA7DE400409BEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39D227AB21BA7DE400409BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				393E159D21E10602005DBA2B /* OnboardPageViewController.swift */,
+				394F5D6221E23B86008AE0F1 /* extensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,8 +142,84 @@
 			isa = PBXGroup;
 			children = (
 				393E15A921E10D6E005DBA2B /* DataRegisterViewController.xib */,
+				394F5D6E21E3823C008AE0F1 /* EditViews */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		394C485F21E23674002EDBE0 /* FinishScreen */ = {
+			isa = PBXGroup;
+			children = (
+				394C486121E23692002EDBE0 /* Controller */,
+				394C486221E23698002EDBE0 /* View */,
+			);
+			path = FinishScreen;
+			sourceTree = "<group>";
+		};
+		394C486021E23684002EDBE0 /* OrderedVC */ = {
+			isa = PBXGroup;
+			children = (
+				394C485F21E23674002EDBE0 /* FinishScreen */,
+			);
+			path = OrderedVC;
+			sourceTree = "<group>";
+		};
+		394C486121E23692002EDBE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				394C485B21E2366C002EDBE0 /* FinishViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		394C486221E23698002EDBE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				394C485C21E2366C002EDBE0 /* FinishViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		394F5D6221E23B86008AE0F1 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		394F5D6721E24705008AE0F1 /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				394F5D6821E2470F008AE0F1 /* Controller */,
+				394F5D6921E24718008AE0F1 /* View */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		394F5D6821E2470F008AE0F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				394F5D6321E24700008AE0F1 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		394F5D6921E24718008AE0F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				394F5D6421E24700008AE0F1 /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		394F5D6E21E3823C008AE0F1 /* EditViews */ = {
+			isa = PBXGroup;
+			children = (
+				394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */,
+				394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */,
+			);
+			path = EditViews;
 			sourceTree = "<group>";
 		};
 		39D2279A21BA7DE400409BEA = {
@@ -205,6 +296,7 @@
 			children = (
 				39D227BD21BA7EF000409BEA /* Onboard */,
 				393E15AC21E10D73005DBA2B /* DataRegister */,
+				394F5D6721E24705008AE0F1 /* RegisterScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -212,6 +304,7 @@
 		39D227BD21BA7EF000409BEA /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
+				394C486021E23684002EDBE0 /* OrderedVC */,
 				393E15A121E1061C005DBA2B /* Controller */,
 				393E15A221E10624005DBA2B /* View */,
 			);
@@ -310,11 +403,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				39D227B121BA7DE500409BEA /* LaunchScreen.storyboard in Resources */,
+				394C485E21E2366C002EDBE0 /* FinishViewController.xib in Resources */,
 				393E15AB21E10D6E005DBA2B /* DataRegisterViewController.xib in Resources */,
+				394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */,
 				39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */,
 				39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */,
 				394C485A21E2327B002EDBE0 /* .gitignore in Resources */,
 				393E15A021E10602005DBA2B /* OnboardPageViewController.xib in Resources */,
+				394F5D6621E24700008AE0F1 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,10 +449,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3943076721C7E86A0075A3C9 /* CoreDataStack.swift in Sources */,
+				394F5D6521E24700008AE0F1 /* RegisterViewController.swift in Sources */,
 				393E15A721E10A80005DBA2B /* RootAssembly.swift in Sources */,
+				394C485D21E2366C002EDBE0 /* FinishViewController.swift in Sources */,
 				393E15AA21E10D6E005DBA2B /* DataRegisterViewController.swift in Sources */,
 				393E159F21E10602005DBA2B /* OnboardPageViewController.swift in Sources */,
+				394F5D6D21E38232008AE0F1 /* NameDateEditView.swift in Sources */,
 				3943076A21C7E9BF0075A3C9 /* UserModel.xcdatamodeld in Sources */,
+				394F5D6121E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift in Sources */,
 				393E15A421E10719005DBA2B /* PresentationAssembly.swift in Sources */,
 				393E159B21E0FF87005DBA2B /* CoreAssembly.swift in Sources */,
 				39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */,

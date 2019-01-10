@@ -24,7 +24,10 @@ class OnboardPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataSource = self
+        if let firstVC = orderedViewControllers.first {
+            setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        }
     }
 
 }
