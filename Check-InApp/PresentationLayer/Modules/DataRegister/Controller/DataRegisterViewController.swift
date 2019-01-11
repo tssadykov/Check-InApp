@@ -12,7 +12,7 @@ class DataRegisterViewController: UIViewController {
 
     var nameDateDataView: NameDateEditView!
     var dataEditView: NameDateEditView!
-
+    var dataView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,15 +20,14 @@ class DataRegisterViewController: UIViewController {
         dataEditView = NameDateEditView()
         view.addSubview(nameDateDataView)
         view.addSubview(dataEditView)
-        
         defaultSetupViews()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupDataViews()
     }
-    
+
     func setupDataViews() {
         let width = view.frame.width * 0.4
         let height = width * 5 / 4
@@ -40,13 +39,14 @@ class DataRegisterViewController: UIViewController {
         nameDateDataView.frame.origin = CGPoint(x: x, y: y)
         dataEditView.frame.origin = CGPoint(x: x + width + view.frame.width * 0.1, y: y)
     }
-    
+
     func defaultSetupViews() {
         nameDateDataView.leftButton.isHidden = true
         nameDateDataView.rightButton.isHidden = true
 
         dataEditView.leftButton.isHidden = true
         dataEditView.rightButton.setTitle("Редактировать", for: .normal)
+        dataEditView.rightButton.removeTarget(self, action: #selector(saveTapped(sender:)), for: .touchUpInside)
         dataEditView.rightButton.addTarget(self, action: #selector(editTapped(sender:)), for: .touchUpInside)
     }
 
@@ -62,6 +62,7 @@ class DataRegisterViewController: UIViewController {
         dataEditView.leftButton.setTitle("Назад", for: .normal)
         dataEditView.leftButton.addTarget(self, action: #selector(backTapped(sender:)), for: .touchUpInside)
         dataEditView.rightButton.setTitle("Сохранить", for: .normal)
+        dataEditView.rightButton.removeTarget(self, action: #selector(editTapped(sender:)), for: .touchUpInside)
         dataEditView.rightButton.addTarget(self, action: #selector(saveTapped(sender:)), for: .touchUpInside)
     }
 
@@ -74,21 +75,21 @@ class DataRegisterViewController: UIViewController {
     }
 
     @objc func nextTapped(sender: UIButton) {
-
+        rightFlipAnimation()
     }
 
     @objc func backTapped(sender: UIButton) {
-
+        leftFlipAnimation()
     }
 
     @objc func saveTapped(sender: UIButton) {
-
+        animatingToDefault()
     }
-    
+
     func animatingToEdit() {
         UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseIn, animations: {
             self.nameDateDataView.layer.zPosition = 10
-            let xCoord = (self.dataEditView.frame.origin.x - self.nameDateDataView.frame.origin.x)/2.0
+            let xCoord = self.view.bounds.midX - self.nameDateDataView.frame.width/2
             self.nameDateDataView.frame.origin.x = xCoord
             self.dataEditView.frame.origin.x = xCoord
         }, completion: { (_) in
@@ -108,12 +109,29 @@ class DataRegisterViewController: UIViewController {
                 self.dataEditView.isEdit = true
                 self.dataEditView.isHidden = true
                 self.editSetupViews()
+                self.dataView = UIView()
+                self.nameDateDataView.removeFromSuperview()
+                self.dataEditView.removeFromSuperview()
+                self.dataView.frame = self.nameDateDataView.frame
+                self.view.addSubview(self.dataView)
+                self.nameDateDataView.frame = self.dataView.bounds
+                self.dataEditView.frame = self.dataView.bounds
+                self.dataView.addSubview(self.nameDateDataView)
+                self.dataView.addSubview(self.dataEditView)
             })
         })
     }
-    
+
     func animatingToDefault() {
-        self.dataEditView.isHidden = false
+        nameDateDataView.isHidden = false
+        dataEditView.isHidden = false
+        nameDateDataView.removeFromSuperview()
+        dataEditView.removeFromSuperview()
+        dataView.removeFromSuperview()
+        view.addSubview(nameDateDataView)
+        view.addSubview(dataEditView)
+        nameDateDataView.frame = dataView.frame
+        dataEditView.frame = dataView.frame
         UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
             self.nameDateDataView.transform = .identity
             self.nameDateDataView.nameLabel.transform = .identity
@@ -137,5 +155,23 @@ class DataRegisterViewController: UIViewController {
                 self.defaultSetupViews()
             })
         })
+    }
+
+    func leftFlipAnimation() {
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromLeft, .showHideTransitionViews]
+        UIView.transition(from: dataEditView,
+                          to: nameDateDataView,
+                          duration: 0.5,
+                          options: transitionOptions,
+                          completion: nil)
+    }
+
+    func rightFlipAnimation() {
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
+        UIView.transition(from: nameDateDataView,
+                          to: dataEditView,
+                          duration: 0.5,
+                          options: transitionOptions,
+                          completion: nil)
     }
 }
