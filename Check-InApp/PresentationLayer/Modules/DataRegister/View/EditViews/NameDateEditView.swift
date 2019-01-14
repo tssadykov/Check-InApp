@@ -10,6 +10,7 @@ import UIKit
 
 class NameDateEditView: UIView {
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!

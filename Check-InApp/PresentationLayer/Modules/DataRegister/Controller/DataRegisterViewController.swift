@@ -38,6 +38,7 @@ class DataRegisterViewController: UIViewController {
         let x = view.frame.width * 0.05
         nameDateDataView.frame.origin = CGPoint(x: x, y: y)
         dataEditView.frame.origin = CGPoint(x: x + width + view.frame.width * 0.1, y: y)
+        nameDateDataView.layer.shadowOffset = CGSize(width: -1, height: 1)
     }
 
     func defaultSetupViews() {
@@ -87,27 +88,24 @@ class DataRegisterViewController: UIViewController {
     }
 
     func animatingToEdit() {
-        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut, animations: {
             self.nameDateDataView.layer.zPosition = 10
             let xCoord = self.view.bounds.midX - self.nameDateDataView.frame.width/2
             self.nameDateDataView.frame.origin.x = xCoord
             self.dataEditView.frame.origin.x = xCoord
         }, completion: { (_) in
-            UIView.animate(withDuration: 1, delay: 0.5, options: .curveLinear, animations: {
-                self.nameDateDataView.transform = CGAffineTransform(scaleX: 2, y: 2)
-                self.nameDateDataView.nameLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.nameDateDataView.nameTextField.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.nameDateDataView.dateLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.nameDateDataView.datePicker.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.dataEditView.transform = CGAffineTransform(scaleX: 2, y: 2)
-                self.dataEditView.nameLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.dataEditView.nameTextField.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.dataEditView.dateLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                self.dataEditView.datePicker.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            UIView.animate(withDuration: 1, delay: 0.5, options: [.curveLinear, .layoutSubviews], animations: {
+                let rect = self.nameDateDataView.frame
+                let newRect = CGRect(x: rect.minX - rect.width/2,
+                                     y: rect.minY - rect.height/2,
+                                     width: rect.width*2, height: rect.height*2)
+                self.nameDateDataView.frame = newRect
+                self.dataEditView.frame = newRect
             }, completion: { (_) in
                 self.nameDateDataView.isEdit = true
                 self.dataEditView.isEdit = true
                 self.dataEditView.isHidden = true
+                self.dataEditView.frame = self.nameDateDataView.frame
                 self.editSetupViews()
                 self.dataView = UIView()
                 self.nameDateDataView.removeFromSuperview()
@@ -132,26 +130,22 @@ class DataRegisterViewController: UIViewController {
         view.addSubview(dataEditView)
         nameDateDataView.frame = dataView.frame
         dataEditView.frame = dataView.frame
+        self.nameDateDataView.isEdit = false
+        self.dataEditView.isEdit = false
         UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
-            self.nameDateDataView.transform = .identity
-            self.nameDateDataView.nameLabel.transform = .identity
-            self.nameDateDataView.nameTextField.transform = .identity
-            self.nameDateDataView.dateLabel.transform = .identity
-            self.nameDateDataView.datePicker.transform = .identity
-            self.dataEditView.transform = .identity
-            self.dataEditView.nameLabel.transform = .identity
-            self.dataEditView.nameTextField.transform = .identity
-            self.dataEditView.dateLabel.transform = .identity
-            self.dataEditView.datePicker.transform = .identity
+
+            let rect = self.nameDateDataView.frame
+            let newRect = CGRect(x: rect.minX + rect.width/4, y: rect.minY + rect.height/4,
+                                 width: rect.width/2, height: rect.height/2)
+            self.nameDateDataView.frame = newRect
+            self.dataEditView.frame = newRect
         }, completion: { (_) in
-            UIView.animate(withDuration: 2, delay: 0.5, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut, animations: {
                 self.nameDateDataView.layer.zPosition = 1
                 let x = self.view.frame.width * 0.05
                 self.nameDateDataView.frame.origin.x = x
                 self.dataEditView.frame.origin.x = x + self.nameDateDataView.frame.width + self.view.frame.width * 0.1
             }, completion: { (_) in
-                self.nameDateDataView.isEdit = false
-                self.dataEditView.isEdit = false
                 self.defaultSetupViews()
             })
         })
