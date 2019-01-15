@@ -13,6 +13,7 @@ class DataRegisterViewController: UIViewController {
     var nameDateDataView: NameDateEditView!
     var dataEditView: NameDateEditView!
     var dataView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -132,6 +133,7 @@ class DataRegisterViewController: UIViewController {
         dataEditView.frame = dataView.frame
         self.nameDateDataView.isEdit = false
         self.dataEditView.isEdit = false
+        self.defaultSetupViews()
         UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
 
             let rect = self.nameDateDataView.frame
@@ -146,7 +148,6 @@ class DataRegisterViewController: UIViewController {
                 self.nameDateDataView.frame.origin.x = x
                 self.dataEditView.frame.origin.x = x + self.nameDateDataView.frame.width + self.view.frame.width * 0.1
             }, completion: { (_) in
-                self.defaultSetupViews()
             })
         })
     }

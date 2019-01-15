@@ -10,20 +10,35 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    var emitterLayer: CAEmitterLayer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        setupEmitterLayer()
+        view.layer.addSublayer(emitterLayer)
     }
-    */
 
+    func setupEmitterLayer() {
+        emitterLayer = CAEmitterLayer()
+        emitterLayer.emitterMode = .outline
+
+        let airplaneEmitterLayerCell = CAEmitterCell()
+        airplaneEmitterLayerCell.contents = UIImage(named: "airplane")!.cgImage!
+        airplaneEmitterLayerCell.birthRate = 5
+        airplaneEmitterLayerCell.lifetime = 10
+        airplaneEmitterLayerCell.velocity = 100
+        airplaneEmitterLayerCell.scale = 1
+        airplaneEmitterLayerCell.velocityRange = 10
+        airplaneEmitterLayerCell.blueRange = 5
+        emitterLayer.emitterCells = [airplaneEmitterLayerCell]
+        emitterLayer.emitterSize = CGSize(width: view.bounds.width - 20, height: view.bounds.height)
+        emitterLayer.emitterShape = CAEmitterLayerEmitterShape.line
+        emitterLayer.emitterPosition = CGPoint(x: view.bounds.width / 2, y: view.bounds.height)
+    }
 }
