@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39139E2321EE7487007D7BB2 /* EditFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2221EE7487007D7BB2 /* EditFlowButton.swift */; };
 		393E159B21E0FF87005DBA2B /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E159A21E0FF87005DBA2B /* CoreAssembly.swift */; };
 		393E159F21E10602005DBA2B /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E159D21E10602005DBA2B /* OnboardPageViewController.swift */; };
 		393E15A021E10602005DBA2B /* OnboardPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393E159E21E10602005DBA2B /* OnboardPageViewController.xib */; };
@@ -24,6 +25,8 @@
 		394F5D6621E24700008AE0F1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6421E24700008AE0F1 /* RegisterViewController.xib */; };
 		394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */; };
 		394F5D6D21E38232008AE0F1 /* NameDateEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */; };
+		395AD6CD21EE35CD0047E665 /* RegisterContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 395AD6CC21EE35CD0047E665 /* RegisterContentView.xib */; };
+		395AD6CF21EE37550047E665 /* RegisterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395AD6CE21EE37550047E665 /* RegisterContentView.swift */; };
 		39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D227A621BA7DE400409BEA /* AppDelegate.swift */; };
 		39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AA21BA7DE400409BEA /* Main.storyboard */; };
 		39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AD21BA7DE500409BEA /* Assets.xcassets */; };
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39139E2221EE7487007D7BB2 /* EditFlowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowButton.swift; sourceTree = "<group>"; };
 		393E159A21E0FF87005DBA2B /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		393E159D21E10602005DBA2B /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
 		393E159E21E10602005DBA2B /* OnboardPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardPageViewController.xib; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		394F5D6421E24700008AE0F1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameDateEditView.xib; sourceTree = "<group>"; };
 		394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDateEditView.swift; sourceTree = "<group>"; };
+		395AD6CC21EE35CD0047E665 /* RegisterContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterContentView.xib; sourceTree = "<group>"; };
+		395AD6CE21EE37550047E665 /* RegisterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContentView.swift; sourceTree = "<group>"; };
 		39D227A321BA7DE400409BEA /* CheckInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D227A621BA7DE400409BEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39D227AB21BA7DE400409BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				394F5D6421E24700008AE0F1 /* RegisterViewController.xib */,
+				395AD6CC21EE35CD0047E665 /* RegisterContentView.xib */,
+				395AD6CE21EE37550047E665 /* RegisterContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 			children = (
 				394F5D6C21E38232008AE0F1 /* NameDateEditView.swift */,
 				394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */,
+				39139E2221EE7487007D7BB2 /* EditFlowButton.swift */,
 			);
 			path = EditViews;
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				393E15AB21E10D6E005DBA2B /* DataRegisterViewController.xib in Resources */,
 				394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */,
 				39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */,
+				395AD6CD21EE35CD0047E665 /* RegisterContentView.xib in Resources */,
 				39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */,
 				394C485A21E2327B002EDBE0 /* .gitignore in Resources */,
 				393E15A021E10602005DBA2B /* OnboardPageViewController.xib in Resources */,
@@ -449,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3943076721C7E86A0075A3C9 /* CoreDataStack.swift in Sources */,
+				39139E2321EE7487007D7BB2 /* EditFlowButton.swift in Sources */,
 				394F5D6521E24700008AE0F1 /* RegisterViewController.swift in Sources */,
 				393E15A721E10A80005DBA2B /* RootAssembly.swift in Sources */,
 				394C485D21E2366C002EDBE0 /* FinishViewController.swift in Sources */,
@@ -457,6 +468,7 @@
 				394F5D6D21E38232008AE0F1 /* NameDateEditView.swift in Sources */,
 				3943076A21C7E9BF0075A3C9 /* UserModel.xcdatamodeld in Sources */,
 				394F5D6121E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift in Sources */,
+				395AD6CF21EE37550047E665 /* RegisterContentView.swift in Sources */,
 				393E15A421E10719005DBA2B /* PresentationAssembly.swift in Sources */,
 				393E159B21E0FF87005DBA2B /* CoreAssembly.swift in Sources */,
 				39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */,

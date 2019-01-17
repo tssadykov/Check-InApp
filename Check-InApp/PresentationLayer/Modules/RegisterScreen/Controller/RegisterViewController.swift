@@ -11,7 +11,8 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     var emitterLayer: CAEmitterLayer!
-
+    unowned var assembly: IPresentationAssembly
+    var isEmitterInstall: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,20 +21,36 @@ class RegisterViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        setupEmitterLayer()
-        view.layer.addSublayer(emitterLayer)
+        if !isEmitterInstall {
+            setupEmitterLayer()
+            view.layer.sublayers = [emitterLayer] + view.layer.sublayers!
+            isEmitterInstall = true
+        }
+        if !UserDefaults.standard.bool(forKey: "isWatchingOnboard") {
+            let onboardVC = assembly.onboardPageVC
+            present(onboardVC, animated: true, completion: nil)
+        }
     }
 
-    func setupEmitterLayer() {
+    init(assembly: IPresentationAssembly) {
+        self.assembly = assembly
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupEmitterLayer() {
         emitterLayer = CAEmitterLayer()
         emitterLayer.emitterMode = .outline
 
         let airplaneEmitterLayerCell = CAEmitterCell()
         airplaneEmitterLayerCell.contents = UIImage(named: "airplane")!.cgImage!
-        airplaneEmitterLayerCell.birthRate = 5
+        airplaneEmitterLayerCell.birthRate = 1
         airplaneEmitterLayerCell.lifetime = 10
         airplaneEmitterLayerCell.velocity = 100
-        airplaneEmitterLayerCell.scale = 1
+        airplaneEmitterLayerCell.scale = 3
         airplaneEmitterLayerCell.velocityRange = 10
         airplaneEmitterLayerCell.blueRange = 5
         emitterLayer.emitterCells = [airplaneEmitterLayerCell]

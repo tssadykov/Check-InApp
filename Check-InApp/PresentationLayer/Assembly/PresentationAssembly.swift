@@ -6,7 +6,7 @@
 //  Copyright © 2019 Тимур. All rights reserved.
 //
 
-protocol IPresentationAssembly {
+protocol IPresentationAssembly: class {
     var onboardPageVC: OnboardPageViewController { get set }
     var finishVC: FinishViewController { get set }
     var dataRegisterVC: DataRegisterViewController { get set }
@@ -14,8 +14,9 @@ protocol IPresentationAssembly {
 }
 
 class PresentationAssembly: IPresentationAssembly {
-    lazy var onboardPageVC: OnboardPageViewController = OnboardPageViewController(viewControllers: [finishVC])
-    lazy var finishVC: FinishViewController = FinishViewController()
-    lazy var dataRegisterVC: DataRegisterViewController = DataRegisterViewController()
-    lazy var registerVC: RegisterViewController = RegisterViewController()
+    lazy var onboardPageVC: OnboardPageViewController = OnboardPageViewController(viewControllers: [finishVC],
+                                                                                  assembly: self)
+    lazy var finishVC: FinishViewController = FinishViewController(assembly: self)
+    lazy var dataRegisterVC: DataRegisterViewController = DataRegisterViewController(assembly: self)
+    lazy var registerVC: RegisterViewController = RegisterViewController(assembly: self)
 }

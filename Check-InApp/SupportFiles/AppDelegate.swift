@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [rootAssembly.presentationAssembly.dataRegisterVC,
-                                            rootAssembly.presentationAssembly.registerVC]
+        tabBarController.viewControllers = [rootAssembly.presentationAssembly.registerVC,
+                                            rootAssembly.presentationAssembly.dataRegisterVC]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true

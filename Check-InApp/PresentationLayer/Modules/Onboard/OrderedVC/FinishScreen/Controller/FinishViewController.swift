@@ -12,6 +12,8 @@ class FinishViewController: UIViewController {
 
     @IBOutlet var finishButton: UIButton!
 
+    unowned var assembly: IPresentationAssembly
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,13 +26,22 @@ class FinishViewController: UIViewController {
         setupFinishButton()
     }
 
+    init(assembly: IPresentationAssembly) {
+        self.assembly = assembly
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     @IBAction func finishButtonTapped(_ sender: UIButton) {
         guard let pageVC = parent as? OnboardPageViewController else { return }
-        UserDefaults.standard.set(true, forKey: "IsIntroWatched")
+        UserDefaults.standard.set(true, forKey: "isWatchingOnboard")
         pageVC.dismiss(animated: true, completion: nil)
     }
 
-    func setupFinishButton() {
+    private func setupFinishButton() {
         finishButton.layer.cornerRadius = finishButton.bounds.width * 0.05
         finishButton.clipsToBounds = true
     }

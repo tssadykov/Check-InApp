@@ -12,8 +12,8 @@ class NameDateEditView: UIView {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
-    @IBOutlet var leftButton: UIButton!
-    @IBOutlet var rightButton: UIButton!
+    @IBOutlet var leftButton: EditFlowButton!
+    @IBOutlet var rightButton: EditFlowButton!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var dateLabel: UILabel!
@@ -25,7 +25,8 @@ class NameDateEditView: UIView {
                 nameTextField.isHidden = false
                 nameTextField.text = nameLabel.text
                 nameLabel.text = "Фамилия Имя Отчество"
-
+                leftButton.isHidden = false
+                rightButton.isHidden = false
                 datePicker.isHidden = false
                 if let date = dateLabel.text {
                     let dateFormatter = DateFormatter()
@@ -35,6 +36,8 @@ class NameDateEditView: UIView {
             } else {
                 nameTextField.isHidden = true
                 datePicker.isHidden = true
+                leftButton.isHidden = true
+                rightButton.isHidden = true
             }
         }
     }

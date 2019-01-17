@@ -12,8 +12,11 @@ class OnboardPageViewController: UIPageViewController {
 
     var orderedViewControllers: [UIViewController]
 
-    init(viewControllers: [UIViewController]) {
+    unowned var assembly: IPresentationAssembly
+
+    init(viewControllers: [UIViewController], assembly: IPresentationAssembly) {
         orderedViewControllers = viewControllers
+        self.assembly = assembly
         super.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
     }
 
