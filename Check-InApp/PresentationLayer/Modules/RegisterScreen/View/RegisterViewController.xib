@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="CheckInApp" customModuleProvider="target">
             <connections>
+                <outlet property="registerContentView" destination="hBo-YF-8PG" id="Ied-5E-IhG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

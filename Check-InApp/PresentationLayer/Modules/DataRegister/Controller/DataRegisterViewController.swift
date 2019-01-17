@@ -77,7 +77,7 @@ class DataRegisterViewController: UIViewController {
         view.layer.shadowOpacity = 1
         view.layer.shouldRasterize = true
     }
-    
+
     private func addActionsForDataViews() {
         nameDateDataView.leftButton.addTarget(self, action: #selector(cancelTapped(sender:)), for: .touchUpInside)
         nameDateDataView.rightButton.addTarget(self, action: #selector(nextTapped(sender:)), for: .touchUpInside)
@@ -107,14 +107,14 @@ class DataRegisterViewController: UIViewController {
     }
 
     private func animatingToEdit() {
-        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseInOut, animations: {
             self.editButton.isHidden = true
             self.nameDateDataView.layer.zPosition = 10
             let xCoord = self.view.bounds.midX - self.nameDateDataView.frame.width/2
             self.nameDateDataView.frame.origin.x = xCoord
             self.dataEditView.frame.origin.x = xCoord
         }, completion: { (_) in
-            UIView.animate(withDuration: 1, delay: 0.5, options: [.curveLinear, .layoutSubviews], animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: [.curveLinear, .layoutSubviews], animations: {
                 let rect = self.nameDateDataView.frame
                 let newRect = CGRect(x: rect.minX - rect.width/2,
                                      y: rect.minY - rect.height/2,

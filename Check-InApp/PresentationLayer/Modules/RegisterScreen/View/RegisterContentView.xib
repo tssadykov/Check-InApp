@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterContentView" customModule="CheckInApp" customModuleProvider="target">
             <connections>
+                <outlet property="aircompanyNameLabel" destination="yO2-h9-Amj" id="GEs-Ra-fal"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="hrh-di-Ctt"/>
                 <outlet property="flightNumberTextField" destination="Nz9-Gi-dVh" id="Ts8-ap-vMe"/>
             </connections>

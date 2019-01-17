@@ -12,6 +12,7 @@ class RegisterContentView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var flightNumberTextField: UITextField!
+    @IBOutlet var aircompanyNameLabel: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

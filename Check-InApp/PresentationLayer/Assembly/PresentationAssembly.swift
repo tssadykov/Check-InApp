@@ -7,16 +7,37 @@
 //
 
 protocol IPresentationAssembly: class {
-    var onboardPageVC: OnboardPageViewController { get set }
-    var finishVC: FinishViewController { get set }
-    var dataRegisterVC: DataRegisterViewController { get set }
-    var registerVC: RegisterViewController { get set }
+    // Controllers
+    func getOnboardPageVC() -> OnboardPageViewController
+    func getFinishVC() -> FinishViewController
+    func getDataRegisterVC() -> DataRegisterViewController
+    func getRegisterVC() -> RegisterViewController
+
+    // Models
+    func getRegisterInteractor() -> IRegisterInteractor
 }
 
 class PresentationAssembly: IPresentationAssembly {
-    lazy var onboardPageVC: OnboardPageViewController = OnboardPageViewController(viewControllers: [finishVC],
-                                                                                  assembly: self)
-    lazy var finishVC: FinishViewController = FinishViewController(assembly: self)
-    lazy var dataRegisterVC: DataRegisterViewController = DataRegisterViewController(assembly: self)
-    lazy var registerVC: RegisterViewController = RegisterViewController(assembly: self)
+    func getOnboardPageVC() -> OnboardPageViewController {
+        let finishVC = getFinishVC()
+        return OnboardPageViewController(viewControllers: [finishVC], assembly: self)
+    }
+
+    func getFinishVC() -> FinishViewController {
+        return FinishViewController(assembly: self)
+    }
+
+    func getDataRegisterVC() -> DataRegisterViewController {
+        return DataRegisterViewController(assembly: self)
+    }
+
+    func getRegisterVC() -> RegisterViewController {
+        let onboard = getOnboardPageVC()
+        let interactor = getRegisterInteractor()
+        return RegisterViewController(onboard: onboard, interactor: interactor)
+    }
+
+    func getRegisterInteractor() -> IRegisterInteractor {
+        return RegisterInteractor(companies: [])
+    }
 }
