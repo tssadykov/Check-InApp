@@ -24,7 +24,7 @@ class CoreDataStack: ICoreDataStack {
 
     lazy var managedModel: NSManagedObjectModel = {
         guard let mom = Bundle.main.url(forResource: "UserModel",
-                                        withExtension: "momd") else { fatalError("Can't get model url")}
+                                        withExtension: "momd") else { fatalError("Can't get model url") }
         guard let model = NSManagedObjectModel(contentsOf: mom) else { fatalError("Can't get model by url \(mom)") }
         return model
     }()

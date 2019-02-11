@@ -43,5 +43,4 @@ class AircompanyPickerView: UIView {
             self.picker.transform = .identity
         }, completion: nil)
     }
-
 }

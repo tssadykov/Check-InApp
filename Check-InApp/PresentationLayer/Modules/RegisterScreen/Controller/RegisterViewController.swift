@@ -59,6 +59,7 @@ class RegisterViewController: UIViewController {
         airplaneEmitterLayerCell.scale = 3
         airplaneEmitterLayerCell.velocityRange = 10
         airplaneEmitterLayerCell.blueRange = 5
+        airplaneEmitterLayerCell.emissionRange = CGFloat.pi / 4
         emitterLayer.emitterCells = [airplaneEmitterLayerCell]
         emitterLayer.emitterSize = CGSize(width: view.bounds.width - 20, height: view.bounds.height)
         emitterLayer.emitterShape = CAEmitterLayerEmitterShape.line
