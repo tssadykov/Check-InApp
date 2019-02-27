@@ -14,22 +14,21 @@ enum Result<T> {
 }
 
 protocol IRequestManager {
-    func loadModel<Request: IModelRequest>(request: Request, completion: @escaping (Result<Request.Model>) -> Void)
+    func loadModel<Request: BaseRequest>(request: Request, completion: @escaping (Result<Request.Model>) -> Void)
+        where Request: IModelRequest
     func sendData(request: BaseRequest)
 }
 
 final class RequestManager: IRequestManager {
 
-    private let executor = Executor()
+    private let executor = Locator.shared.executor()
 
     func sendData(request: BaseRequest) {
         let urlRequest = request.request()
-        executor.execute(urlRequest: urlRequest) { (_) in
-            <#code#>
-        }
     }
 
-    func loadModel<Request>(request: Request, completion: @escaping (Result<Request.Model>) -> Void) where Request: IModelRequest {
+    func loadModel<Request>(request: Request, completion: @escaping (Result<Request.Model>) -> Void)
+        where Request: BaseRequest, Request: IModelRequest {
         let urlRequest = request.request()
         executor.execute(urlRequest: urlRequest) { (result) in
             switch result {

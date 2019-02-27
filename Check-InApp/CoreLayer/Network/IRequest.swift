@@ -13,20 +13,31 @@ enum RequstType: String {
     case post = "POST"
 }
 
-protocol BaseRequest {
-    func request() -> URLRequest
-    func mainURL() -> String
-    func service() -> String
-    func type() -> RequstType
-    func header() -> String
-}
+class BaseRequest {
 
-extension BaseRequest {
+    func request() -> URLRequest {
+        let urlString = mainURL() + service()
+        guard let url = URL(string: urlString) else { fatalError("Cannot parse url string")}
+        return URLRequest(url: url)
+    }
+
     func mainURL() -> String {
         return "url"
     }
+
+    func service() -> String {
+        return ""
+    }
+
+    func type() -> RequstType {
+        return .get
+    }
+
+    func header() -> String {
+        return ""
+    }
 }
 
-protocol IModelRequest: BaseRequest {
+protocol IModelRequest {
     associatedtype Model: Codable
 }

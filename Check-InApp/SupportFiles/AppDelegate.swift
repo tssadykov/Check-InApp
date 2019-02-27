@@ -18,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [rootAssembly.presentationAssembly.getRegisterVC(),
-                                            rootAssembly.presentationAssembly.getDataRegisterVC()]
+        tabBarController.viewControllers = [
+            rootAssembly.presentationAssembly.getRegisterVC().wrappedInNavigation.withTabbarItem(with: "airplaneTab"),
+            rootAssembly.presentationAssembly.getDataRegisterVC().withTabbarItem(with: "id-card")
+        ]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true

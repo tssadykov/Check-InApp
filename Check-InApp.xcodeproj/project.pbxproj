@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3906B28A2225440E00524CF4 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906B2892225440E00524CF4 /* OnboardView.swift */; };
+		3906B28E22255DB000524CF4 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3906B28D22255DB000524CF4 /* OnboardViewController.swift */; };
+		3906B29022255DD600524CF4 /* OnboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3906B28F22255DD500524CF4 /* OnboardViewController.xib */; };
 		39139E2321EE7487007D7BB2 /* EditFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2221EE7487007D7BB2 /* EditFlowButton.swift */; };
 		39139E2721F0DE0D007D7BB2 /* AircompanyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2621F0DE0D007D7BB2 /* AircompanyPickerView.swift */; };
 		39139E2921F0DF7B007D7BB2 /* Aircompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2821F0DF7B007D7BB2 /* Aircompany.swift */; };
 		39139E2C21F0E2B6007D7BB2 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2B21F0E2B6007D7BB2 /* RegisterInteractor.swift */; };
 		39139E2E21F0FA11007D7BB2 /* RegisterVC+PickerDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39139E2D21F0FA11007D7BB2 /* RegisterVC+PickerDS.swift */; };
+		391CC95C22218509000AADA2 /* DataRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CC95B22218509000AADA2 /* DataRegisterInteractor.swift */; };
+		391CC95E2221878F000AADA2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CC95D2221878F000AADA2 /* UserService.swift */; };
+		391CC96422219CAF000AADA2 /* Locator+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CC96322219CAF000AADA2 /* Locator+Services.swift */; };
 		393E159B21E0FF87005DBA2B /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E159A21E0FF87005DBA2B /* CoreAssembly.swift */; };
-		393E159F21E10602005DBA2B /* OnboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E159D21E10602005DBA2B /* OnboardPageViewController.swift */; };
-		393E15A021E10602005DBA2B /* OnboardPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393E159E21E10602005DBA2B /* OnboardPageViewController.xib */; };
 		393E15A421E10719005DBA2B /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E15A321E10719005DBA2B /* PresentationAssembly.swift */; };
 		393E15A721E10A80005DBA2B /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E15A621E10A80005DBA2B /* RootAssembly.swift */; };
 		393E15AA21E10D6E005DBA2B /* DataRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393E15A821E10D6E005DBA2B /* DataRegisterViewController.swift */; };
 		393E15AB21E10D6E005DBA2B /* DataRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393E15A921E10D6E005DBA2B /* DataRegisterViewController.xib */; };
-		3943076721C7E86A0075A3C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943076621C7E86A0075A3C9 /* CoreDataStack.swift */; };
+		3943076721C7E86A0075A3C9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943076621C7E86A0075A3C9 /* Storage.swift */; };
 		3943076A21C7E9BF0075A3C9 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3943076821C7E9BF0075A3C9 /* UserModel.xcdatamodeld */; };
 		394C485A21E2327B002EDBE0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 394C485921E2327B002EDBE0 /* .gitignore */; };
-		394C485D21E2366C002EDBE0 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C485B21E2366C002EDBE0 /* FinishViewController.swift */; };
-		394C485E21E2366C002EDBE0 /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394C485C21E2366C002EDBE0 /* FinishViewController.xib */; };
-		394F5D6121E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */; };
 		394F5D6521E24700008AE0F1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394F5D6321E24700008AE0F1 /* RegisterViewController.swift */; };
 		394F5D6621E24700008AE0F1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6421E24700008AE0F1 /* RegisterViewController.xib */; };
 		394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */; };
@@ -34,11 +35,21 @@
 		397991932211587200AB5A73 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397991922211587200AB5A73 /* RequestManager.swift */; };
 		397991952211593F00AB5A73 /* IRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397991942211593F00AB5A73 /* IRequest.swift */; };
 		3979919822115D8D00AB5A73 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3979919722115D8D00AB5A73 /* Executor.swift */; };
+		39CA1D9C2219B148008529DA /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CA1D9B2219B148008529DA /* Identifiable.swift */; };
+		39CA1E9C2211F3130047FCDD /* Stored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CA1E9B2211F3130047FCDD /* Stored.swift */; };
 		39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D227A621BA7DE400409BEA /* AppDelegate.swift */; };
 		39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AA21BA7DE400409BEA /* Main.storyboard */; };
 		39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AD21BA7DE500409BEA /* Assets.xcassets */; };
 		39D227B121BA7DE500409BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D227AF21BA7DE500409BEA /* LaunchScreen.storyboard */; };
 		39D227C721BA7F6000409BEA /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D227C621BA7F6000409BEA /* DataTest.swift */; };
+		39EB1220221841A700B5D2C4 /* IRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB121F221841A700B5D2C4 /* IRequester.swift */; };
+		39EB12222218485E00B5D2C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB12212218485E00B5D2C4 /* User.swift */; };
+		39EB12252218490E00B5D2C4 /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB12242218490E00B5D2C4 /* DBUser.swift */; };
+		39F22F84221D469100F30B2F /* AircompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F22F83221D469100F30B2F /* AircompanyService.swift */; };
+		39F22F89221D492700F30B2F /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F22F88221D492700F30B2F /* Locator.swift */; };
+		39F22F8C221D4A1000F30B2F /* AircompanyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F22F8B221D4A1000F30B2F /* AircompanyRequest.swift */; };
+		39F22F8F221D7F9400F30B2F /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F22F8D221D7F9400F30B2F /* CheckInViewController.swift */; };
+		39F22F95221D80FD00F30B2F /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F22F94221D80FD00F30B2F /* UIViewController+Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,24 +63,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3906B2892225440E00524CF4 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		3906B28D22255DB000524CF4 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		3906B28F22255DD500524CF4 /* OnboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardViewController.xib; sourceTree = "<group>"; };
 		39139E2221EE7487007D7BB2 /* EditFlowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlowButton.swift; sourceTree = "<group>"; };
 		39139E2621F0DE0D007D7BB2 /* AircompanyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircompanyPickerView.swift; sourceTree = "<group>"; };
 		39139E2821F0DF7B007D7BB2 /* Aircompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircompany.swift; sourceTree = "<group>"; };
 		39139E2B21F0E2B6007D7BB2 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		39139E2D21F0FA11007D7BB2 /* RegisterVC+PickerDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterVC+PickerDS.swift"; sourceTree = "<group>"; };
+		391CC95B22218509000AADA2 /* DataRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRegisterInteractor.swift; sourceTree = "<group>"; };
+		391CC95D2221878F000AADA2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		391CC96322219CAF000AADA2 /* Locator+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locator+Services.swift"; sourceTree = "<group>"; };
 		393E159A21E0FF87005DBA2B /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
-		393E159D21E10602005DBA2B /* OnboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageViewController.swift; sourceTree = "<group>"; };
-		393E159E21E10602005DBA2B /* OnboardPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardPageViewController.xib; sourceTree = "<group>"; };
 		393E15A321E10719005DBA2B /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 		393E15A621E10A80005DBA2B /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
 		393E15A821E10D6E005DBA2B /* DataRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRegisterViewController.swift; sourceTree = "<group>"; };
 		393E15A921E10D6E005DBA2B /* DataRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataRegisterViewController.xib; sourceTree = "<group>"; };
-		3943076621C7E86A0075A3C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3943076621C7E86A0075A3C9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		3943076921C7E9BF0075A3C9 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		394C485921E2327B002EDBE0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../../../Projects/TinkoffChat/.gitignore; sourceTree = "<group>"; };
-		394C485B21E2366C002EDBE0 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
-		394C485C21E2366C002EDBE0 /* FinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
-		394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardPVC+PageVCDataSource.swift"; sourceTree = "<group>"; };
 		394F5D6321E24700008AE0F1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		394F5D6421E24700008AE0F1 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		394F5D6A21E37FB0008AE0F1 /* NameDateEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameDateEditView.xib; sourceTree = "<group>"; };
@@ -79,6 +91,8 @@
 		397991922211587200AB5A73 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		397991942211593F00AB5A73 /* IRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequest.swift; sourceTree = "<group>"; };
 		3979919722115D8D00AB5A73 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
+		39CA1D9B2219B148008529DA /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		39CA1E9B2211F3130047FCDD /* Stored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stored.swift; sourceTree = "<group>"; };
 		39D227A321BA7DE400409BEA /* CheckInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D227A621BA7DE400409BEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39D227AB21BA7DE400409BEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +102,14 @@
 		39D227C421BA7F6000409BEA /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D227C621BA7F6000409BEA /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		39D227C821BA7F6000409BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39EB121F221841A700B5D2C4 /* IRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequester.swift; sourceTree = "<group>"; };
+		39EB12212218485E00B5D2C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39EB12242218490E00B5D2C4 /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
+		39F22F83221D469100F30B2F /* AircompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircompanyService.swift; sourceTree = "<group>"; };
+		39F22F88221D492700F30B2F /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		39F22F8B221D4A1000F30B2F /* AircompanyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircompanyRequest.swift; sourceTree = "<group>"; };
+		39F22F8D221D7F9400F30B2F /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		39F22F94221D80FD00F30B2F /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +130,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3906B28B22255D0800524CF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3906B28F22255DD500524CF4 /* OnboardViewController.xib */,
+				3906B2892225440E00524CF4 /* OnboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3906B28C22255D1000524CF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3906B28D22255DB000524CF4 /* OnboardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		39139E2A21F0DFAF007D7BB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,29 +164,20 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		391CC95F22218794000AADA2 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				391CC95D2221878F000AADA2 /* UserService.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
 		393E159C21E0FFED005DBA2B /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 				393E159A21E0FF87005DBA2B /* CoreAssembly.swift */,
 			);
 			path = Assembly;
-			sourceTree = "<group>";
-		};
-		393E15A121E1061C005DBA2B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				393E159D21E10602005DBA2B /* OnboardPageViewController.swift */,
-				394F5D6221E23B86008AE0F1 /* extensions */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		393E15A221E10624005DBA2B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				393E159E21E10602005DBA2B /* OnboardPageViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		393E15A521E10722005DBA2B /* Assembly */ = {
@@ -163,6 +193,7 @@
 			children = (
 				393E15AD21E10D91005DBA2B /* Controller */,
 				393E15AE21E10D97005DBA2B /* View */,
+				391CC95B22218509000AADA2 /* DataRegisterInteractor.swift */,
 			);
 			path = DataRegister;
 			sourceTree = "<group>";
@@ -182,47 +213,6 @@
 				394F5D6E21E3823C008AE0F1 /* EditViews */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		394C485F21E23674002EDBE0 /* FinishScreen */ = {
-			isa = PBXGroup;
-			children = (
-				394C486121E23692002EDBE0 /* Controller */,
-				394C486221E23698002EDBE0 /* View */,
-			);
-			path = FinishScreen;
-			sourceTree = "<group>";
-		};
-		394C486021E23684002EDBE0 /* OrderedVC */ = {
-			isa = PBXGroup;
-			children = (
-				394C485F21E23674002EDBE0 /* FinishScreen */,
-			);
-			path = OrderedVC;
-			sourceTree = "<group>";
-		};
-		394C486121E23692002EDBE0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				394C485B21E2366C002EDBE0 /* FinishViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		394C486221E23698002EDBE0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				394C485C21E2366C002EDBE0 /* FinishViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		394F5D6221E23B86008AE0F1 /* extensions */ = {
-			isa = PBXGroup;
-			children = (
-				394F5D6021E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift */,
-			);
-			path = extensions;
 			sourceTree = "<group>";
 		};
 		394F5D6721E24705008AE0F1 /* RegisterScreen */ = {
@@ -275,6 +265,18 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		39CA1E9A2211F13F0047FCDD /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3943076621C7E86A0075A3C9 /* Storage.swift */,
+				3943076821C7E9BF0075A3C9 /* UserModel.xcdatamodeld */,
+				39CA1E9B2211F3130047FCDD /* Stored.swift */,
+				39EB121F221841A700B5D2C4 /* IRequester.swift */,
+				39CA1D9B2219B148008529DA /* Identifiable.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		39D2279A21BA7DE400409BEA = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +302,6 @@
 				39D227BB21BA7E2D00409BEA /* CoreLayer */,
 				39D227BA21BA7E2600409BEA /* ServiceLayer */,
 				39D227B921BA7E1C00409BEA /* PresentationLayer */,
-				39D227B221BA7DE500409BEA /* Info.plist */,
 				39D227B821BA7E0C00409BEA /* SupportFiles */,
 			);
 			path = "Check-InApp";
@@ -309,11 +310,13 @@
 		39D227B821BA7E0C00409BEA /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				39D227B221BA7DE500409BEA /* Info.plist */,
 				39D227A621BA7DE400409BEA /* AppDelegate.swift */,
 				39D227AA21BA7DE400409BEA /* Main.storyboard */,
 				39D227AD21BA7DE500409BEA /* Assets.xcassets */,
 				39D227AF21BA7DE500409BEA /* LaunchScreen.storyboard */,
 				393E15A621E10A80005DBA2B /* RootAssembly.swift */,
+				39F22F96221D810300F30B2F /* extensions */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -330,6 +333,9 @@
 		39D227BA21BA7E2600409BEA /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				39F22F8A221D49FE00F30B2F /* AircompanyService */,
+				391CC95F22218794000AADA2 /* UserService */,
+				391CC96322219CAF000AADA2 /* Locator+Services.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -337,10 +343,11 @@
 		39D227BB21BA7E2D00409BEA /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3943076621C7E86A0075A3C9 /* CoreDataStack.swift */,
-				3943076821C7E9BF0075A3C9 /* UserModel.xcdatamodeld */,
+				39CA1E9A2211F13F0047FCDD /* Storage */,
 				39799196221159C700AB5A73 /* Network */,
 				393E159C21E0FFED005DBA2B /* Assembly */,
+				39EB12232218486300B5D2C4 /* Models */,
+				39F22F88221D492700F30B2F /* Locator.swift */,
 			);
 			path = CoreLayer;
 			sourceTree = "<group>";
@@ -351,6 +358,7 @@
 				39D227BD21BA7EF000409BEA /* Onboard */,
 				393E15AC21E10D73005DBA2B /* DataRegister */,
 				394F5D6721E24705008AE0F1 /* RegisterScreen */,
+				39F22F91221D802E00F30B2F /* CheckInScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -358,9 +366,8 @@
 		39D227BD21BA7EF000409BEA /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
-				394C486021E23684002EDBE0 /* OrderedVC */,
-				393E15A121E1061C005DBA2B /* Controller */,
-				393E15A221E10624005DBA2B /* View */,
+				3906B28C22255D1000524CF4 /* Controller */,
+				3906B28B22255D0800524CF4 /* View */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -372,6 +379,48 @@
 				39D227C821BA7F6000409BEA /* Info.plist */,
 			);
 			path = DataTest;
+			sourceTree = "<group>";
+		};
+		39EB12232218486300B5D2C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39EB12212218485E00B5D2C4 /* User.swift */,
+				39EB12242218490E00B5D2C4 /* DBUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		39F22F8A221D49FE00F30B2F /* AircompanyService */ = {
+			isa = PBXGroup;
+			children = (
+				39F22F83221D469100F30B2F /* AircompanyService.swift */,
+				39F22F8B221D4A1000F30B2F /* AircompanyRequest.swift */,
+			);
+			path = AircompanyService;
+			sourceTree = "<group>";
+		};
+		39F22F91221D802E00F30B2F /* CheckInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				39F22F93221D80AB00F30B2F /* Controller */,
+			);
+			path = CheckInScreen;
+			sourceTree = "<group>";
+		};
+		39F22F93221D80AB00F30B2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39F22F8D221D7F9400F30B2F /* CheckInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F22F96221D810300F30B2F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39F22F94221D80FD00F30B2F /* UIViewController+Navigation.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,14 +506,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				39D227B121BA7DE500409BEA /* LaunchScreen.storyboard in Resources */,
-				394C485E21E2366C002EDBE0 /* FinishViewController.xib in Resources */,
 				393E15AB21E10D6E005DBA2B /* DataRegisterViewController.xib in Resources */,
 				394F5D6B21E37FB0008AE0F1 /* NameDateEditView.xib in Resources */,
 				39D227AE21BA7DE500409BEA /* Assets.xcassets in Resources */,
 				395AD6CD21EE35CD0047E665 /* RegisterContentView.xib in Resources */,
 				39D227AC21BA7DE400409BEA /* Main.storyboard in Resources */,
+				3906B29022255DD600524CF4 /* OnboardViewController.xib in Resources */,
 				394C485A21E2327B002EDBE0 /* .gitignore in Resources */,
-				393E15A021E10602005DBA2B /* OnboardPageViewController.xib in Resources */,
 				394F5D6621E24700008AE0F1 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,24 +551,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3943076721C7E86A0075A3C9 /* CoreDataStack.swift in Sources */,
+				39F22F89221D492700F30B2F /* Locator.swift in Sources */,
+				3943076721C7E86A0075A3C9 /* Storage.swift in Sources */,
 				39139E2721F0DE0D007D7BB2 /* AircompanyPickerView.swift in Sources */,
+				39EB12252218490E00B5D2C4 /* DBUser.swift in Sources */,
+				39F22F8F221D7F9400F30B2F /* CheckInViewController.swift in Sources */,
 				39139E2E21F0FA11007D7BB2 /* RegisterVC+PickerDS.swift in Sources */,
+				39EB12222218485E00B5D2C4 /* User.swift in Sources */,
 				397991952211593F00AB5A73 /* IRequest.swift in Sources */,
 				39139E2321EE7487007D7BB2 /* EditFlowButton.swift in Sources */,
 				394F5D6521E24700008AE0F1 /* RegisterViewController.swift in Sources */,
+				39F22F84221D469100F30B2F /* AircompanyService.swift in Sources */,
 				393E15A721E10A80005DBA2B /* RootAssembly.swift in Sources */,
 				397991932211587200AB5A73 /* RequestManager.swift in Sources */,
+				39CA1E9C2211F3130047FCDD /* Stored.swift in Sources */,
 				39139E2C21F0E2B6007D7BB2 /* RegisterInteractor.swift in Sources */,
-				394C485D21E2366C002EDBE0 /* FinishViewController.swift in Sources */,
+				39F22F95221D80FD00F30B2F /* UIViewController+Navigation.swift in Sources */,
+				391CC95E2221878F000AADA2 /* UserService.swift in Sources */,
+				391CC95C22218509000AADA2 /* DataRegisterInteractor.swift in Sources */,
 				393E15AA21E10D6E005DBA2B /* DataRegisterViewController.swift in Sources */,
-				393E159F21E10602005DBA2B /* OnboardPageViewController.swift in Sources */,
+				3906B28E22255DB000524CF4 /* OnboardViewController.swift in Sources */,
+				39F22F8C221D4A1000F30B2F /* AircompanyRequest.swift in Sources */,
+				39EB1220221841A700B5D2C4 /* IRequester.swift in Sources */,
 				394F5D6D21E38232008AE0F1 /* NameDateEditView.swift in Sources */,
 				3979919822115D8D00AB5A73 /* Executor.swift in Sources */,
 				3943076A21C7E9BF0075A3C9 /* UserModel.xcdatamodeld in Sources */,
-				394F5D6121E23AC0008AE0F1 /* OnboardPVC+PageVCDataSource.swift in Sources */,
+				39CA1D9C2219B148008529DA /* Identifiable.swift in Sources */,
+				3906B28A2225440E00524CF4 /* OnboardView.swift in Sources */,
 				395AD6CF21EE37550047E665 /* RegisterContentView.swift in Sources */,
 				393E15A421E10719005DBA2B /* PresentationAssembly.swift in Sources */,
+				391CC96422219CAF000AADA2 /* Locator+Services.swift in Sources */,
 				393E159B21E0FF87005DBA2B /* CoreAssembly.swift in Sources */,
 				39139E2921F0DF7B007D7BB2 /* Aircompany.swift in Sources */,
 				39D227A721BA7DE400409BEA /* AppDelegate.swift in Sources */,
@@ -687,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7THUBBPH8;
-				INFOPLIST_FILE = "Check-InApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Check-InApp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,7 +765,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7THUBBPH8;
-				INFOPLIST_FILE = "Check-InApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Check-InApp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

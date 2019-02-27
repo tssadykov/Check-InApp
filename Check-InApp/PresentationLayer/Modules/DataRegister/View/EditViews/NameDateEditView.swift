@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NameDateEditView: UIView {
+final class NameDateEditView: UIView {
 
-    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var leftButton: EditFlowButton!
     @IBOutlet var rightButton: EditFlowButton!
@@ -18,6 +18,12 @@ class NameDateEditView: UIView {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var datePicker: UIDatePicker!
+
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        return dateFormatter
+    }()
 
     var isEdit: Bool = false {
         willSet {
@@ -29,7 +35,6 @@ class NameDateEditView: UIView {
                 rightButton.isHidden = false
                 datePicker.isHidden = false
                 if let date = dateLabel.text {
-                    let dateFormatter = DateFormatter()
                     datePicker.date = dateFormatter.date(from: date) ?? Date()
                 }
                 dateLabel.text = "Дата рождения"
@@ -38,6 +43,8 @@ class NameDateEditView: UIView {
                 datePicker.isHidden = true
                 leftButton.isHidden = true
                 rightButton.isHidden = true
+                nameLabel.text = nameTextField.text
+                dateLabel.text = dateFormatter.string(from: datePicker.date)
             }
         }
     }

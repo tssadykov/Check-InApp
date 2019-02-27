@@ -7,9 +7,9 @@
 //
 
 protocol ICoreAssembly {
-    var coreDataStack: ICoreDataStack { get }
+    var coreDataStack: IStorage { get }
 }
 
 class CoreAssembly: ICoreAssembly {
-    lazy var coreDataStack: ICoreDataStack = CoreDataStack()
+    lazy var coreDataStack: IStorage = Storage()
 }

@@ -6,33 +6,29 @@
 //  Copyright © 2019 Тимур. All rights reserved.
 //
 
+import UIKit
+
 protocol IPresentationAssembly: class {
     // Controllers
-    func getOnboardPageVC() -> OnboardPageViewController
-    func getFinishVC() -> FinishViewController
     func getDataRegisterVC() -> DataRegisterViewController
     func getRegisterVC() -> RegisterViewController
-
+    func getOnboardVC() -> OnboardViewController
     // Models
     func getRegisterInteractor() -> IRegisterInteractor
 }
 
 class PresentationAssembly: IPresentationAssembly {
-    func getOnboardPageVC() -> OnboardPageViewController {
-        let finishVC = getFinishVC()
-        return OnboardPageViewController(viewControllers: [finishVC], assembly: self)
-    }
-
-    func getFinishVC() -> FinishViewController {
-        return FinishViewController(assembly: self)
-    }
 
     func getDataRegisterVC() -> DataRegisterViewController {
         return DataRegisterViewController(assembly: self)
     }
 
+    func getOnboardVC() -> OnboardViewController {
+        return OnboardViewController()
+    }
+
     func getRegisterVC() -> RegisterViewController {
-        let onboard = getOnboardPageVC()
+        let onboard = getOnboardVC()
         let interactor = getRegisterInteractor()
         return RegisterViewController(onboard: onboard, interactor: interactor)
     }

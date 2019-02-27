@@ -8,12 +8,8 @@
 
 import Foundation
 
-protocol ICompany {
-    var name: String { get set }
-    var id: String { get set }
-}
-
-struct Aircompany: ICompany, Codable {
+struct Aircompany: Codable {
     var name: String
     var id: String
+    var logo: String
 }

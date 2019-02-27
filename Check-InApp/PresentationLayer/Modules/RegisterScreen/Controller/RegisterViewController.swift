@@ -13,17 +13,30 @@ class RegisterViewController: UIViewController {
     var emitterLayer: CAEmitterLayer!
     var isEmitterInstall: Bool
     var interactor: IRegisterInteractor
-    var onboardVC: OnboardPageViewController
     var aircompanyPickerView: AircompanyPickerView?
+    let onboardVC: OnboardViewController
     @IBOutlet var registerContentView: RegisterContentView!
+
+    init(onboard: OnboardViewController, interactor: IRegisterInteractor) {
+        onboardVC = onboard
+        isEmitterInstall = false
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if !UserDefaults.standard.bool(forKey: "isWatchingOnboard") {
-            present(onboardVC, animated: true, completion: nil)
-        }
+        keyboardFadedOnTap()
         setupViews()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -34,17 +47,14 @@ class RegisterViewController: UIViewController {
             view.layer.sublayers = [emitterLayer] + view.layer.sublayers!
             isEmitterInstall = true
         }
+        if !UserDefaults.standard.bool(forKey: "isWatchingOnboard") {
+            present(onboardVC, animated: true, completion: nil)
+        }
     }
 
-    init(onboard: OnboardPageViewController, interactor: IRegisterInteractor) {
-        onboardVC = onboard
-        isEmitterInstall = false
-        self.interactor = interactor
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     private func setupEmitterLayer() {

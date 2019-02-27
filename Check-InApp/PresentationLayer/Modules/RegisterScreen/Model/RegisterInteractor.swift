@@ -9,13 +9,14 @@
 import Foundation
 
 protocol IRegisterInteractor {
-    var companies: [ICompany] { get set }
+    var companies: [Aircompany
+        ] { get set }
 }
 
 class RegisterInteractor: IRegisterInteractor {
-    var companies: [ICompany]
+    var companies: [Aircompany]
 
-    init(companies: [ICompany]) {
+    init(companies: [Aircompany]) {
         self.companies = companies
     }
 }
