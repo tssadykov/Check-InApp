@@ -9,9 +9,9 @@
 import Foundation
 
 class AircompanyRequest: BaseRequest, IModelRequest {
-    typealias Model = [Aircompany]
+    typealias Model = AircompanyContainer
 
     override func service() -> String {
-        return "/aircompanies"
+        return "/getcompanies"
     }
 }

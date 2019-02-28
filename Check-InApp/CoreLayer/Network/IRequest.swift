@@ -22,7 +22,7 @@ class BaseRequest {
     }
 
     func mainURL() -> String {
-        return "url"
+        return "http://185.43.5.36:8080"
     }
 
     func service() -> String {

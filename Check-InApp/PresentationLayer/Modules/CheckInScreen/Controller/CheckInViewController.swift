@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class CheckInViewController: UIViewController {
+final class CheckInViewController: UIViewController {
 
     private let wkWebView = WKWebView()
     private var url: URL

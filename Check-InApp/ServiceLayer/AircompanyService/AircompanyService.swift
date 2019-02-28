@@ -9,7 +9,7 @@
 import Foundation
 
 protocol IAircompanyService {
-    func loadServices(completion: @escaping (Result<[Aircompany]>) -> Void)
+    func loadServices(completion: @escaping (Result<AircompanyContainer>) -> Void)
 }
 
 class AircompanySerivce: IAircompanyService {
@@ -17,7 +17,7 @@ class AircompanySerivce: IAircompanyService {
     let storage = Locator.shared.storage
     let requestManager = Locator.shared.requestManager()
 
-    func  loadServices(completion: @escaping (Result<[Aircompany]>) -> Void) {
+    func  loadServices(completion: @escaping (Result<AircompanyContainer>) -> Void) {
         let airRequest = AircompanyRequest()
         requestManager.loadModel(request: airRequest, completion: completion)
     }

@@ -14,11 +14,11 @@ class RegisterViewController: UIViewController {
     var isEmitterInstall: Bool
     var interactor: IRegisterInteractor
     var aircompanyPickerView: AircompanyPickerView?
-    let onboardVC: OnboardViewController
+    var currentAircompany: Aircompany?
+    var aircompanies: [Aircompany] = []
     @IBOutlet var registerContentView: RegisterContentView!
 
-    init(onboard: OnboardViewController, interactor: IRegisterInteractor) {
-        onboardVC = onboard
+    init(interactor: IRegisterInteractor) {
         isEmitterInstall = false
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
@@ -47,14 +47,28 @@ class RegisterViewController: UIViewController {
             view.layer.sublayers = [emitterLayer] + view.layer.sublayers!
             isEmitterInstall = true
         }
-        if !UserDefaults.standard.bool(forKey: "isWatchingOnboard") {
-            present(onboardVC, animated: true, completion: nil)
-        }
+        loadAircompany()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
+    private func loadAircompany() {
+        interactor.loadAircompanies { result in
+            switch result {
+            case .failure:
+                self.showAlert(message: "Не удалось загрузить данные.\nПроверьте подключение")
+            case .success(let aircompanyContainer):
+                self.aircompanies = aircompanyContainer.aircompanies
+                if let aircompany = self.aircompanies.first {
+                    self.currentAircompany = aircompany
+                    self.registerContentView.aircompanyNameLabel.text = aircompany.name
+                }
+                self.aircompanyPickerView?.picker.reloadAllComponents()
+            }
+        }
     }
 
     private func setupEmitterLayer() {

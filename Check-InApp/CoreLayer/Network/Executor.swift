@@ -19,6 +19,7 @@ final class Executor {
                 return
             }
             guard let data = data else { completion(.failure(DataError())); return }
+            print(String.init(data: data, encoding: .utf8))
             completion(.success(data))
         }
         dataTask.resume()

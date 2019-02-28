@@ -9,14 +9,21 @@
 import Foundation
 
 protocol IRegisterInteractor {
-    var companies: [Aircompany
-        ] { get set }
+    func loadAircompanies(completion: @escaping (Result<AircompanyContainer>) -> Void)
 }
 
 class RegisterInteractor: IRegisterInteractor {
-    var companies: [Aircompany]
+    let aircompanyService: IAircompanyService
 
-    init(companies: [Aircompany]) {
-        self.companies = companies
+    init(aircompanyService: IAircompanyService) {
+        self.aircompanyService = aircompanyService
+    }
+
+    func loadAircompanies(completion: @escaping (Result<AircompanyContainer>) -> Void) {
+        aircompanyService.loadServices { result in
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
     }
 }

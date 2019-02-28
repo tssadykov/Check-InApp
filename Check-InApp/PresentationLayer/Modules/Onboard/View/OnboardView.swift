@@ -43,8 +43,14 @@ final class OnboardView: UIView {
         if imageView.superview == nil {
             addSubview(imageView)
         }
-        textLabel.frame = CGRect(x: bounds.width * 0.05, y: bounds.height * 0.05, width: bounds.width * 0.9, height: bounds.height * 0.1)
-        imageView.frame = CGRect(x: bounds.width * 0.05, y: bounds.height * 0.2, width: bounds.width * 0.9, height: bounds.height * 0.7)
+        textLabel.frame = CGRect(x: bounds.width * 0.1,
+                                 y: bounds.height * 0.05,
+                                 width: bounds.width * 0.8,
+                                 height: bounds.height * 0.2)
+        imageView.frame = CGRect(x: 0,
+                                 y: bounds.height * 0.2,
+                                 width: bounds.width,
+                                 height: bounds.height * 0.7)
     }
 
     func animate() {

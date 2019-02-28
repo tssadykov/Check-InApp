@@ -11,5 +11,9 @@ import Foundation
 struct Aircompany: Codable {
     var name: String
     var id: String
-    var logo: String
+    var logoURL: String
+}
+
+struct AircompanyContainer: Codable {
+    var aircompanies: [Aircompany]
 }

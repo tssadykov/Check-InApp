@@ -18,16 +18,12 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             pageControl.numberOfPages = onboardsData.count
         }
     }
-    var onboardsData = [("Регистрируйтесь на рейс в одно нажатие", "smartphone")]
+    var onboardsData = [("Регистрируйтесь на рейс в одно нажатие", "smartphone"), ("fdsf", "smartphone")]
     var onboardsView: [OnboardView] = []
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setupUI()
-    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setupUI()
         onboardsView[0].animate()
     }
 
@@ -39,11 +35,13 @@ class OnboardViewController: UIViewController, UIScrollViewDelegate {
             let onboardView = OnboardView(text: onboardData.0,
                                           imageName: onboardData.1,
                                           frame: CGRect(x: i * onboardScollView.bounds.width,
-                                                        y: 0, width: onboardScollView.bounds.width, height: onboardScollView.bounds.height))
+                                                        y: 0, width: onboardScollView.bounds.width,
+                                                        height: onboardScollView.bounds.height))
             onboardScollView.addSubview(onboardView)
             onboardsView.append(onboardView)
             i += 1
         }
+        onboardScollView.contentSize.width = onboardScollView.bounds.width * CGFloat(i+1)
         onboardsData = []
         finishButton.layer.cornerRadius = finishButton.bounds.width * 0.05
         finishButton.clipsToBounds = true

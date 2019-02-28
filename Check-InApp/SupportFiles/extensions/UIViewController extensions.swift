@@ -19,6 +19,13 @@ extension UIViewController {
         return self
     }
 
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ок", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+
     func keyboardFadedOnTap() {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dissmisKeyboard(recognizer:)))
         view.addGestureRecognizer(recognizer)

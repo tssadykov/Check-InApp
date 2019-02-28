@@ -23,19 +23,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-Hk-bEC">
-                    <rect key="frame" x="37.5" y="66.5" width="300" height="534"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-Hk-bEC">
+                    <rect key="frame" x="37.5" y="63.5" width="300" height="540"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-v3-0fA">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="467"/>
                         </scrollView>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Syj-5g-rzR">
-                            <rect key="frame" x="0.0" y="467" width="300" height="37"/>
+                            <rect key="frame" x="0.0" y="470" width="300" height="37"/>
                             <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="currentPageIndicatorTintColor" red="0.0" green="0.89925130210000004" blue="0.9897460938" alpha="1" colorSpace="calibratedRGB"/>
                         </pageControl>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSX-8i-mq4">
-                            <rect key="frame" x="0.0" y="504" width="300" height="30"/>
+                            <rect key="frame" x="0.0" y="510" width="300" height="30"/>
                             <color key="backgroundColor" red="0.0" green="0.89925130210000004" blue="0.9897460938" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Приступить">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,12 +49,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="MBM-Hk-bEC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="AGa-88-w4x"/>
                 <constraint firstItem="MBM-Hk-bEC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="N6r-y3-zRv"/>
                 <constraint firstItem="MBM-Hk-bEC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WIO-7E-FM1"/>
                 <constraint firstItem="Hxe-v3-0fA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="ikh-SZ-LZr"/>
                 <constraint firstItem="Hxe-v3-0fA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.7" id="wZv-GR-9v1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
 </document>

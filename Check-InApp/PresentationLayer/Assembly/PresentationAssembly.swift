@@ -10,6 +10,7 @@ import UIKit
 
 protocol IPresentationAssembly: class {
     // Controllers
+    func getLoginViewController() -> LoginViewController
     func getDataRegisterVC() -> DataRegisterViewController
     func getRegisterVC() -> RegisterViewController
     func getOnboardVC() -> OnboardViewController
@@ -28,12 +29,15 @@ class PresentationAssembly: IPresentationAssembly {
     }
 
     func getRegisterVC() -> RegisterViewController {
-        let onboard = getOnboardVC()
         let interactor = getRegisterInteractor()
-        return RegisterViewController(onboard: onboard, interactor: interactor)
+        return RegisterViewController(interactor: interactor)
     }
 
     func getRegisterInteractor() -> IRegisterInteractor {
-        return RegisterInteractor(companies: [])
+        return RegisterInteractor(aircompanyService: Locator.shared.aircompanyService())
+    }
+
+    func getLoginViewController() -> LoginViewController {
+        return LoginViewController()
     }
 }

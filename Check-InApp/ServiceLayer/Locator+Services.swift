@@ -12,4 +12,8 @@ extension Locator {
     func userService() -> IUserService {
         return UserService()
     }
+
+    func aircompanyService() -> IAircompanyService {
+        return AircompanySerivce()
+    }
 }
